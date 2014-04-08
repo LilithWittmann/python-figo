@@ -276,7 +276,7 @@ class FigoConnection(FigoObject):
             Auto-generated recovery password.
         """
 
-        response = self._query_api("/auth/user", kwargs, method="POST")
+        response = self._query_api("/auth/user", kwargs)
         if response is None:
             return None
         elif 'error' in response:
@@ -308,7 +308,7 @@ class FigoConnection(FigoObject):
             Auto-generated recovery password.
         """
 
-        response = self._query_api("/auth/unlock", kwargs, method="POST")
+        response = self._query_api("/auth/unlock", kwargs)
         if response is None:
             return None
         elif 'error' in response:
